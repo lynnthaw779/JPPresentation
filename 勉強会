@@ -51,8 +51,18 @@ h3. ②対象メソッドを設定
 MyDelegate del = MethodAのように、デリゲートのオブジェクトを作成せずにメソッドを
 直接割り当てることで、ターゲットメソッドを設定できます。
 
-h3. ③デリゲートを呼び出し
+h3. ③デリゲートを呼び出す
 
 ターゲットメソッドを設定した後、（）演算子を使用してデリゲートを呼び出すことができます。
 
 !invokeDel.PNG!
+
+h2. 引数としてデリゲートを渡す
+
+以下のように、メソッドはデリゲート型のパラメーターを持つことができます。
+
+！Passing Delegate as a Parameter Picture！
+
+***　Real Project explanation with PrintDialog 
+
+
