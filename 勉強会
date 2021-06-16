@@ -1,3 +1,8 @@
+https://cammy.co.jp/technical/c_delegate/
+https://araramistudio.jimdo.com/2019/04/03/c-%E3%81%AE%E3%83%87%E3%83%AA%E3%82%B2%E3%83%BC%E3%83%88-delegate-%E3%81%A3%E3%81%A6%E4%BD%95/
+https://ufcpp.net/study/csharp/sp_delegate.html#abst
+https://tech-lab.sios.jp/archives/15318
+https://www.fenet.jp/dotnet/column/language/1607/
 
 h1. delegate(デリゲート)
 
@@ -15,7 +20,7 @@ h2. デリゲートとは
 
 h2. デリゲートの基本
 
-* デリゲートを使用するためには[3]ステップは含まれます。
+* デリゲートを使用するためには[ 3 ]ステップは含まれます。
 ①デリゲート型を定義
 ②対象メソッドを設定
 ③デリゲートを呼び出し
@@ -26,9 +31,28 @@ h3. ①デリゲート型を定義
 関数を変数として扱う為には、関数の型を決める必要があります。
 
 関数の型を定義するのが delegate キーワードです。
-delegateの宣言は↓このようになります。
+以下はデリゲート型名「MyDelegate」を宣言します。
 
+!decDele.PNG!
 
 h3. ②対象メソッドを設定
 
+デリゲートを宣言した後、デリゲートのオブジェクトを作成することで対象メソッドを設定する。
+
+対象メソッドを設定する時には、デリゲートの定義時に指定した物と同じ戻り値と引数リスト
+を持つメソッドを代入する事が出来ます。
+
+例えば、delegate void MyDelegate(string msg);
+と定義したデリゲート型には、string　型の引数を一つをとり、
+何も返さない対象メソッドを設定します。
+
+!setTarget.PNG!
+
+MyDelegate del = MethodAのように、デリゲートのオブジェクトを作成せずにメソッドを
+直接割り当てることで、ターゲットメソッドを設定できます。
+
 h3. ③デリゲートを呼び出し
+
+ターゲットメソッドを設定した後、（）演算子を使用してデリゲートを呼び出すことができます。
+
+!invokeDel.PNG!
